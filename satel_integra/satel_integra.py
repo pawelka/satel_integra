@@ -404,7 +404,7 @@ class AsyncSatel:
             _LOGGER.info("Calling handler for id: 0x%s", str_msg_id)
             self._message_handlers[msg_id](resp)
         else:
-            _LOGGER.info("Ignoring message: 0x%s", str_msg_id)
+            _LOGGER.debug("Ignoring message: 0x%s", str_msg_id)
 
     async def monitor_status(self, alarm_status_callback=None,
                              zone_changed_callback=None,
